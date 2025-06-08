@@ -1,0 +1,15 @@
+{
+    "name": "test-project",
+    "version": "1.0.0",
+    "description": "test",
+    "license": "ISC",
+    "author": "Anna",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "test": "node test.js"
+    },
+    "dependencies": {
+        "mocha": "^11.5.0"
+    }
+}
