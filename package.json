@@ -7,9 +7,15 @@
     "type": "commonjs",
     "main": "index.js",
     "scripts": {
-        "test": "node test.js"
+        "test": "mocha"
     },
-    "dependencies": {
-        "mocha": "^11.5.0"
+    "devDependencies": {
+        "@types/node": "^22.14.0",
+        "chai": "^5.2.0",
+        "mocha": "^11.5.0",
+        "node-fetch": "^3.3.2",
+        "prettier": "^3.5.3",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.2"
     }
 }
