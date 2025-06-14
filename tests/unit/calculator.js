@@ -1,36 +1,34 @@
-class Calculator {
+export class Calculator {
     calculate(num1, num2, operation) {
         switch (operation) {
-            case '+':
+            case 'add':
                 return this.add(num1, num2);
-            case '-':
+            case 'subtract':
                 return this.subtract(num1, num2);
-            case '*':
+            case 'multiply':
                 return this.multiply(num1, num2);
-            case '/':
+            case 'divide':
                 return this.divide(num1, num2);
-            case '**':
+            case 'power':
                 return this.power(num1, num2);
-            case '%':
+            case 'modulo':
                 return this.modulo(num1, num2);
+            default:
+                throw new Error(`Неизвестная операция: ${operation}`);
         }
     }
-
     // Сложение
     add(num1, num2) {
         return num1 + num2;
     }
-
     // Вычитание
     subtract(num1, num2) {
         return num1 - num2;
     }
-
     // Умножение
     multiply(num1, num2) {
         return num1 * num2;
     }
-
     // Деление
     divide(num1, num2) {
         if (num2 === 0) {
@@ -38,12 +36,10 @@ class Calculator {
         }
         return num1 / num2;
     }
-
     // Возведение в степень
-    power(num1, num2) {
-        return Math.pow(num1, num2);
+    power(base, exponent) {
+        return Math.pow(base, exponent);
     }
-
     // Остаток от деления
     modulo(num1, num2) {
         return num1 % num2;
