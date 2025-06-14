@@ -4,18 +4,20 @@
     "description": "test",
     "license": "ISC",
     "author": "Anna",
-    "type": "commonjs",
+    "type": "module",
     "main": "index.js",
     "scripts": {
-        "test": "mocha"
+        "test": "mocha --loader ts-node/esm --require ts-node/register tests/unit/*.spec.ts",
+        "test:watch": "mocha --loader ts-node/esm --require ts-node/register --watch tests/unit/*.spec.ts"
     },
     "devDependencies": {
-        "@types/node": "^22.14.0",
+        "@types/chai": "^5.2.2",
+        "@types/jest": "^29.5.14",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^22.15.31",
         "chai": "^5.2.0",
-        "mocha": "^11.5.0",
-        "node-fetch": "^3.3.2",
-        "prettier": "^3.5.3",
+        "mocha": "^11.6.0",
         "ts-node": "^10.9.2",
-        "typescript": "^5.8.2"
+        "typescript": "^5.8.3"
     }
 }
