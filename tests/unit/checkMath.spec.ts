@@ -1,18 +1,20 @@
 import { expect } from 'chai';
-import { Calculator } from './calculator.js';
+import { Calculator } from '../../src/calculator';
 //простая проверка на работоспособность
 describe('Calculator', () => {
-  let calculator: Calculator;
+  let calc: Calculator;
 
-  beforeEach(() => {
-    calculator = new Calculator();
+  before(() => {
+    calc = new Calculator();
   });
 
-  it('should add two numbers', () => {
-    expect(calculator.calculate(2, 3, 'add')).to.equal(5);
+  // Тест 1: Сложение
+  it('should correctly add two numbers', () => {
+    expect(calc.add(1, 2)).to.equal(3);
   });
 
-  it('should subtract two numbers', () => {
-    expect(calculator.calculate(5, 3, 'subtract')).to.equal(2);
+  // Тест 2: Вычитание
+  it('should correctly subtract two numbers', () => {
+    expect(calc.subtract(5, 3)).to.equal(2);
   });
 });

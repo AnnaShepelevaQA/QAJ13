@@ -4,11 +4,11 @@
     "description": "test",
     "license": "ISC",
     "author": "Anna",
-    "type": "module",
+    "type": "commonjs",
     "main": "index.js",
     "scripts": {
-        "test": "mocha --loader ts-node/esm --require ts-node/register tests/unit/*.spec.ts",
-        "test:watch": "mocha --loader ts-node/esm --require ts-node/register --watch tests/unit/*.spec.ts"
+        "test": "mocha -r ts-node/register 'tests/**/*.ts'",
+        "test:check": "mocha -r ts-node/register 'tests/**/*.ts'"
     },
     "devDependencies": {
         "@types/chai": "^5.2.2",
